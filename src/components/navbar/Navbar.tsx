@@ -7,7 +7,7 @@ import superlig from "../../assets/superlig.svg";
 
 export const Navbar: React.FC = () => {
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
-  const [largeur, setLargeur] = useState(window.innerWidth);
+  const [largeur, setLargeur] = useState<number>(window.innerWidth);
 
   const toggleNavSmallScreen = () => {
     setToggleMenu(!toggleMenu);
