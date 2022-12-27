@@ -30,6 +30,7 @@ export const teams = [
         founded: 1990,
         national: false,
         logo: "https://media-2.api-sports.io/football/teams/564.png",
+        site: "https://ibfk.com.tr/",
       },
       venue: {
         id: 1584,
@@ -50,6 +51,7 @@ export const teams = [
         founded: 1981,
         national: false,
         logo: "https://media-1.api-sports.io/football/teams/607.png",
+        site: "https://www.konyaspor.org.tr/",
       },
       venue: {
         id: 1587,
@@ -70,6 +72,7 @@ export const teams = [
         founded: 1907,
         national: false,
         logo: "https://media-1.api-sports.io/football/teams/611.png",
+        site: "https://www.fenerbahce.org/",
       },
       venue: {
         id: 1581,
@@ -90,6 +93,7 @@ export const teams = [
         founded: 1905,
         national: false,
         logo: "https://media-1.api-sports.io/football/teams/645.png",
+        site: "https://www.galatasaray.org/anasayfa",
       },
       venue: {
         id: 12598,
@@ -110,6 +114,7 @@ export const teams = [
         founded: 1948,
         national: false,
         logo: "https://media-1.api-sports.io/football/teams/996.png",
+        site: "https://www.alanyaspor.org.tr/",
       },
       venue: {
         id: 19219,
@@ -130,6 +135,7 @@ export const teams = [
         founded: 1967,
         national: false,
         logo: "https://media-1.api-sports.io/football/teams/998.png",
+        site: "https://www.trabzonspor.org.tr/",
       },
       venue: {
         id: 19221,
@@ -150,6 +156,7 @@ export const teams = [
         founded: 1966,
         national: false,
         logo: "https://media-1.api-sports.io/football/teams/1001.png",
+        site: "https://www.kayserispor.org.tr/",
       },
       venue: {
         id: 1586,
@@ -170,6 +177,7 @@ export const teams = [
         founded: 1967,
         national: false,
         logo: "https://media-2.api-sports.io/football/teams/1002.png",
+        site: "https://www.sivasspor.org.tr/",
       },
       venue: {
         id: 1589,
@@ -190,6 +198,7 @@ export const teams = [
         founded: 1921,
         national: false,
         logo: "https://media.api-sports.io/football/teams/1004.png",
+        site: "http://www.kasimpasa.com.tr/",
       },
       venue: {
         id: 1585,
@@ -210,6 +219,7 @@ export const teams = [
         founded: 1966,
         national: false,
         logo: "https://media-1.api-sports.io/football/teams/1005.png",
+        site: "https://www.antalyaspor.com.tr/tr",
       },
       venue: {
         id: 19220,
@@ -230,6 +240,7 @@ export const teams = [
         founded: 1910,
         national: false,
         logo: "https://media-1.api-sports.io/football/teams/1010.png",
+        site: "https://www.ankaragucu.org.tr/",
       },
       venue: {
         id: 2378,
@@ -250,6 +261,7 @@ export const teams = [
         founded: 1941,
         national: false,
         logo: "https://media.api-sports.io/football/teams/3563.png",
+        site: "https://www.adanademirspor.org.tr/",
       },
       venue: {
         id: 11924,
@@ -270,6 +282,7 @@ export const teams = [
         founded: 1988,
         national: false,
         logo: "https://media-2.api-sports.io/football/teams/3573.png",
+        site: "https://www.gaziantepfk.org/",
       },
       venue: {
         id: 2375,
@@ -290,6 +303,7 @@ export const teams = [
         founded: 1967,
         national: false,
         logo: "https://media.api-sports.io/football/teams/3574.png",
+        site: "https://www.giresunspor.org.tr/",
       },
       venue: {
         id: 12089,
@@ -310,6 +324,7 @@ export const teams = [
         founded: 1967,
         national: false,
         logo: "https://media-1.api-sports.io/football/teams/3575.png",
+        site: "https://www.hatayspor.org.tr/",
       },
       venue: {
         id: 12280,
@@ -330,6 +345,7 @@ export const teams = [
         founded: 1938,
         national: false,
         logo: "https://media-2.api-sports.io/football/teams/3577.png",
+        site: "https://twitter.com/umraniyespor",
       },
       venue: {
         id: 2379,
@@ -350,6 +366,7 @@ export const teams = [
         founded: 1926,
         national: false,
         logo: "https://media-2.api-sports.io/football/teams/3578.png",
+        site: "https://www.istanbulspor.com.tr/tr/",
       },
       venue: {
         id: 12281,
@@ -370,6 +387,7 @@ export const teams = [
         founded: null,
         national: false,
         logo: "https://media-1.api-sports.io/football/teams/3589.png",
+        site: "https://www.karagumruk.com/",
       },
       venue: {
         id: 1968,

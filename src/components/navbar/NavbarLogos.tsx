@@ -6,7 +6,9 @@ export const NavbarLogos: React.FC = () => {
   return (
     <div>
       {teams[0].map((team) => (
-        <img className="logo" src={team.team.logo} alt="" />
+        <a key={team.team.id} href={team.team.site} target="blank">
+          <img className="logo" src={team.team.logo} alt="" />
+        </a>
       ))}
     </div>
   );

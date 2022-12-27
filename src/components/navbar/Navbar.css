@@ -1,6 +1,7 @@
 .navbar {
   display: flex;
   height: 125px;
+  position: relative;
 }
 
 .navbar__left {
@@ -49,6 +50,7 @@
 
 .navbar__right__link-item:hover {
   color: #e74949;
+  font-weight: 700;
 }
 
 .navbar__right__logos h4 {
