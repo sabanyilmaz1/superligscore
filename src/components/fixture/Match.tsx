@@ -6,6 +6,9 @@ interface MatchProps {
   homeLogo: string;
   awayLogo: string;
   date: number;
+  homeScore: number | null;
+  awayScore: number | null;
+  isFinished: boolean;
 }
 
 export const Match = ({
@@ -14,6 +17,9 @@ export const Match = ({
   homeLogo,
   awayLogo,
   date,
+  homeScore,
+  awayScore,
+  isFinished,
 }: MatchProps) => {
   // convert timestamp to date
   const dateObj = new Date(date * 1000);
@@ -28,16 +34,18 @@ export const Match = ({
     ":" +
     (minutes > 10 ? minutes : `0${minutes}`);
 
-  console.log("time", time);
-
   return (
     <div className="match">
       <div className="match__home__team">{homeTeam}</div>
       <img src={homeLogo} alt={homeTeam} className="match__logo" />
-      <div className="match__hour">{time}</div>
+      <div className={`${isFinished ? "match__score" : "match__hour"}`}>
+        {isFinished ? `${homeScore} - ${awayScore}` : time}
+      </div>
       <img src={awayLogo} alt={awayTeam} className="match__logo" />
       <div className="match__away__team">{awayTeam}</div>
-      <div className="match__date">{date}</div>
+      <div className="match__date">
+        {day}/{month}/{year}
+      </div>
     </div>
   );
 };

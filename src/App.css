@@ -1,5 +1,4 @@
 .App {
-  display: grid;
-  height: 100vh;
+  height: 100%;
   background-color: #f6bbbb;
 }
