@@ -6,6 +6,14 @@
 .fixtures__round {
   margin-left: 30px;
   margin-right: 30px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.fixtures__select {
+  margin-top: 2%;
 }
 
 .fixtures__match {

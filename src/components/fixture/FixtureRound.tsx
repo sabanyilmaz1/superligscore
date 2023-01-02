@@ -4,7 +4,7 @@ interface RoundProps {
   round: number;
 }
 
-export const Round: React.FC<RoundProps> = ({ round }: RoundProps) => {
+export const FixtureRound: React.FC<RoundProps> = ({ round }: RoundProps) => {
   return (
     <div className="round">
       <div className="round__title">

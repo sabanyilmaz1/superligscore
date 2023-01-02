@@ -11,7 +11,7 @@ interface MatchProps {
   isFinished: boolean;
 }
 
-export const Match = ({
+export const FixtureMatch = ({
   homeTeam,
   awayTeam,
   homeLogo,
