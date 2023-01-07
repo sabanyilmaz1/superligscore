@@ -3,6 +3,17 @@
   background-color: #f6bbbb;
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 5%;
+  padding-bottom: 100%;
+  font-size: 50px;
+  background-color: #f6bbbb;
+}
+
 .fixtures__round {
   margin-left: 30px;
   margin-right: 30px;

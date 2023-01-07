@@ -3,6 +3,7 @@ import Select from "react-select";
 
 import { FixtureRound } from "./FixtureRound";
 import { FixtureMatch } from "./FixtureMatch";
+import { Loader } from "../loader";
 import "./Fixture.css";
 
 import { MatchModel } from "../../models/MatchModel";
@@ -10,6 +11,7 @@ import { getFixtures, getLastRound } from "../../api";
 
 export const Fixture: React.FC = () => {
   const [matches, setMatches] = useState<MatchModel[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [round, setRound] = useState<number>(0);
   const [roundFilters, setRoundFilters] = useState<number[]>([]);
   const [roundSelected, setRoundSelected] = useState<OptionType | null>(null);
@@ -36,6 +38,7 @@ export const Fixture: React.FC = () => {
         currentRound + 1,
         currentRound + 2,
       ]);
+      setIsLoading(false);
     });
   }, []);
 
@@ -52,6 +55,16 @@ export const Fixture: React.FC = () => {
     setRoundSelected(option);
     setRound(option.value);
   };
+
+  console.log(isLoading);
+
+  if (isLoading) {
+    return (
+      <div className="loading">
+        <Loader />
+      </div>
+    );
+  }
 
   return (
     <div className="fixtures">
