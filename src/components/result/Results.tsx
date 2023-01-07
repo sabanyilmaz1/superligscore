@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 import Select from "react-select";
 
-import { FixtureRound } from "./FixtureRound";
-import { FixtureMatch } from "./FixtureMatch";
-import "./Fixture.css";
+import { FixtureRound } from "../fixture/FixtureRound";
+import { FixtureMatch } from "../fixture/FixtureMatch";
+import "./Result.css";
 
 import { MatchModel } from "../../models/MatchModel";
 import { getFixtures, getLastRound } from "../../api";
+import { Loader } from "../loader";
 
-export const Fixture: React.FC = () => {
+export const Results: React.FC = () => {
   const [matches, setMatches] = useState<MatchModel[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [round, setRound] = useState<number>(0);
   const [roundFilters, setRoundFilters] = useState<number[]>([]);
   const [roundSelected, setRoundSelected] = useState<OptionType | null>(null);
@@ -28,14 +30,15 @@ export const Fixture: React.FC = () => {
 
   useEffect(() => {
     getLastRound().then((res) => {
-      setRound(parseInt(res.response[0].split(" ")[3]));
+      setRound(parseInt(res.response[0].split(" ")[3]) - 1);
       const currentRound = parseInt(res.response[0].split(" ")[3]);
-      setRoundFilters([
-        currentRound - 1,
-        currentRound,
-        currentRound + 1,
-        currentRound + 2,
-      ]);
+      // make an array of number with number : start 1, end currentRound, step 1
+      const roundFilters = Array.from(
+        { length: currentRound },
+        (_, i) => i + 1
+      );
+      setRoundFilters(roundFilters);
+      setIsLoading(false);
     });
   }, []);
 
@@ -53,12 +56,22 @@ export const Fixture: React.FC = () => {
     setRound(option.value);
   };
 
+  console.log(isLoading);
+
+  if (isLoading) {
+    return (
+      <div className="loading">
+        <Loader />
+      </div>
+    );
+  }
+
   return (
-    <div className="fixtures">
-      <div className="fixtures__round">
+    <div className="results">
+      <div className="results__round">
         <FixtureRound round={round} />
         <Select
-          className="fixtures__select"
+          className="results__select"
           defaultValue={roundSelected}
           onChange={handleChange}
           options={options}
@@ -66,7 +79,7 @@ export const Fixture: React.FC = () => {
           getOptionValue={(option) => option.value.toString()}
         />
       </div>
-      <div className="fixtures__match">
+      <div className="results__match">
         {matches &&
           matches
             .sort((a, b) => a.fixture.timestamp - b.fixture.timestamp)

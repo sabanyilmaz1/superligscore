@@ -1,0 +1,66 @@
+.loader {
+  position: relative;
+}
+.loader__loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.loader__text {
+  color: aliceblue;
+  font-size: 5rem;
+  font-weight: bolder;
+}
+
+.loader__dot {
+  color: aliceblue;
+  font-size: 5rem;
+  font-weight: bolder;
+}
+
+.dot1 {
+  animation: translate 1s ease-in infinite;
+}
+.dot2 {
+  animation: translate 1.2s ease-in infinite;
+}
+.dot3 {
+  animation: translate 1.4s ease-in infinite;
+}
+
+@keyframes translate {
+  50% {
+    transform: translateY(-50px);
+  }
+}
+
+.gravity {
+  width: 40px;
+  height: 40px;
+  margin-left: 100px;
+  animation: bounce 1s cubic-bezier(0.68, 0.35, 0.29, 0.54) infinite;
+}
+.ball {
+  width: 200px;
+  height: 200px;
+  background-image: url("https://seeklogo.com/images/S/spor-toto-super-lig-logo-CAED487D37-seeklogo.com.png");
+  background-size: cover;
+  animation: roll 1.5s linear infinite;
+}
+@keyframes roll {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes bounce {
+  50% {
+    transform: translateY(100px);
+  }
+}
+@keyframes shadowScale {
+  50% {
+    transform: scaleX(1);
+    opacity: 0.8;
+  }
+}
