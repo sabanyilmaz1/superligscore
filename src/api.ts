@@ -27,3 +27,12 @@ export const getFixtures = async (round: number) => {
   const data = await response.json();
   return data;
 };
+
+export const getTable = async () => {
+  const response = await fetch(
+    LINKS + "standings?league=203&season=2022",
+    requestOptions
+  );
+  const data = await response.json();
+  return data;
+};

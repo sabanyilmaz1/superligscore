@@ -74,6 +74,11 @@ export const Navbar: React.FC = () => {
                     Results
                   </StyledLink>
                 </li>
+                <li>
+                  <StyledLink className="navbar__right__link-item" to="/table">
+                    Table
+                  </StyledLink>
+                </li>
               </ul>
             )}
           </nav>

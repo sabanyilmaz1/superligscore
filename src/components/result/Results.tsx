@@ -21,17 +21,26 @@ export const Results: React.FC = () => {
     label: string;
   };
 
-  const options: OptionType[] = [
-    { value: roundFilters[0], label: `Matchweek - ${roundFilters[0]}` },
-    { value: roundFilters[1], label: `Matchweek - ${roundFilters[1]}` },
-    { value: roundFilters[2], label: `Matchweek - ${roundFilters[2]}` },
-    { value: roundFilters[3], label: `Matchweek - ${roundFilters[3]}` },
-  ];
+  // const options: OptionType[] = [
+  //   { value: roundFilters[0], label: `Matchweek - ${roundFilters[0]}` },
+  //   { value: roundFilters[1], label: `Matchweek - ${roundFilters[1]}` },
+  //   { value: roundFilters[2], label: `Matchweek - ${roundFilters[2]}` },
+  //   { value: roundFilters[3], label: `Matchweek - ${roundFilters[3]}` },
+  // ];
+
+  const options: OptionType[] = [];
+
+  roundFilters.forEach((roundFilter) => {
+    options.push({
+      value: roundFilter,
+      label: `Matchweek - ${roundFilter}`,
+    });
+  });
 
   useEffect(() => {
     getLastRound().then((res) => {
       setRound(parseInt(res.response[0].split(" ")[3]) - 1);
-      const currentRound = parseInt(res.response[0].split(" ")[3]);
+      const currentRound = parseInt(res.response[0].split(" ")[3]) - 1;
       // make an array of number with number : start 1, end currentRound, step 1
       const roundFilters = Array.from(
         { length: currentRound },

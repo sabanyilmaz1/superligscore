@@ -1,0 +1,57 @@
+.table {
+  height: 100%;
+  background-color: #f6bbbb;
+  padding: 5%;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 900;
+}
+
+.table__header {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 2%;
+}
+
+.table__grid__header {
+  display: flex;
+  background-color: #e7313162;
+  padding: 1%;
+  font-size: 12px;
+}
+
+.table__grid__body {
+  display: flex;
+  padding: 1%;
+  font-size: 12px;
+  border-bottom: #e7313162 solid 1px;
+}
+
+.table__grid__pos {
+  width: 3%;
+}
+.table__grid__logoDiv {
+  width: 30px;
+}
+.table__grid__logo {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: -5px;
+  margin-right: 1%;
+}
+
+.table__grid__club {
+  width: 30%;
+}
+
+.table__grid__stat {
+  width: 8%;
+}
+
+.table__grid__points {
+  width: 5%;
+}
+
+.table__grid__form {
+  width: 10%;
+}

@@ -25,19 +25,13 @@ export const Fixture: React.FC = () => {
     { value: roundFilters[0], label: `Matchweek - ${roundFilters[0]}` },
     { value: roundFilters[1], label: `Matchweek - ${roundFilters[1]}` },
     { value: roundFilters[2], label: `Matchweek - ${roundFilters[2]}` },
-    { value: roundFilters[3], label: `Matchweek - ${roundFilters[3]}` },
   ];
 
   useEffect(() => {
     getLastRound().then((res) => {
       setRound(parseInt(res.response[0].split(" ")[3]));
       const currentRound = parseInt(res.response[0].split(" ")[3]);
-      setRoundFilters([
-        currentRound - 1,
-        currentRound,
-        currentRound + 1,
-        currentRound + 2,
-      ]);
+      setRoundFilters([currentRound, currentRound + 1, currentRound + 2]);
       setIsLoading(false);
     });
   }, []);

@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import { Fixture } from "./components/fixture";
 import { Results } from "./components/result";
+import { Table } from "./components/table";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       <Routes>
         <Route path="/" element={<Fixture />} />
         <Route path="/results" element={<Results />} />
+        <Route path="/table" element={<Table />} />
       </Routes>
     </Router>
   </React.StrictMode>
